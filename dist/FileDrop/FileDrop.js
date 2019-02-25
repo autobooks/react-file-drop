@@ -9,9 +9,12 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var prop_types_1 = require("prop-types");
-var react_1 = require("react");
+var prop_types_1 = __importDefault(require("prop-types"));
+var react_1 = __importDefault(require("react"));
 var FileDrop = /** @class */ (function (_super) {
     __extends(FileDrop, _super);
     function FileDrop(props) {
