@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import PropTypes from 'prop-types';
 import React, { DragEvent as ReactDragEvent, DragEventHandler as ReactDragEventHandler } from 'react';
 export declare type TDropEffects = 'copy' | 'move' | 'link' | 'none';
@@ -29,18 +30,18 @@ declare class FileDrop extends React.PureComponent<IFileDropProps, IFileDropStat
         draggingOverTargetClassName: string;
     };
     static propTypes: {
-        className: PropTypes.Requireable<string>;
-        targetClassName: PropTypes.Requireable<string>;
-        draggingOverFrameClassName: PropTypes.Requireable<string>;
-        draggingOverTargetClassName: PropTypes.Requireable<string>;
-        onDragOver: PropTypes.Requireable<(...args: any[]) => any>;
-        onDragLeave: PropTypes.Requireable<(...args: any[]) => any>;
-        onDrop: PropTypes.Requireable<(...args: any[]) => any>;
-        dropEffect: PropTypes.Requireable<string>;
+        className: PropTypes.Requireable<any>;
+        targetClassName: PropTypes.Requireable<any>;
+        draggingOverFrameClassName: PropTypes.Requireable<any>;
+        draggingOverTargetClassName: PropTypes.Requireable<any>;
+        onDragOver: PropTypes.Requireable<any>;
+        onDragLeave: PropTypes.Requireable<any>;
+        onDrop: PropTypes.Requireable<any>;
+        dropEffect: PropTypes.Requireable<any>;
         frame: (props: any, propName: any, componentName: any) => Error;
-        onFrameDragEnter: PropTypes.Requireable<(...args: any[]) => any>;
-        onFrameDragLeave: PropTypes.Requireable<(...args: any[]) => any>;
-        onFrameDrop: PropTypes.Requireable<(...args: any[]) => any>;
+        onFrameDragEnter: PropTypes.Requireable<any>;
+        onFrameDragLeave: PropTypes.Requireable<any>;
+        onFrameDrop: PropTypes.Requireable<any>;
     };
     frameDragCounter: number;
     constructor(props: IFileDropProps);

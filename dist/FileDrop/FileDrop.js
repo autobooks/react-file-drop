@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -8,8 +9,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import PropTypes from 'prop-types';
-import React from 'react';
+Object.defineProperty(exports, "__esModule", { value: true });
+var prop_types_1 = require("prop-types");
+var react_1 = require("react");
 var FileDrop = /** @class */ (function (_super) {
     __extends(FileDrop, _super);
     function FileDrop(props) {
@@ -112,8 +114,8 @@ var FileDrop = /** @class */ (function (_super) {
             fileDropTargetClassName += " " + draggingOverFrameClassName;
         if (draggingOverTarget)
             fileDropTargetClassName += " " + draggingOverTargetClassName;
-        return (React.createElement("div", { className: className, onDragOver: this.handleDragOver, onDragLeave: this.handleDragLeave, onDrop: this.handleDrop },
-            React.createElement("div", { className: fileDropTargetClassName }, children)));
+        return (react_1.default.createElement("div", { className: className, onDragOver: this.handleDragOver, onDragLeave: this.handleDragLeave, onDrop: this.handleDrop },
+            react_1.default.createElement("div", { className: fileDropTargetClassName }, children)));
     };
     FileDrop.defaultProps = {
         dropEffect: 'copy',
@@ -124,14 +126,14 @@ var FileDrop = /** @class */ (function (_super) {
         draggingOverTargetClassName: 'file-drop-dragging-over-target',
     };
     FileDrop.propTypes = {
-        className: PropTypes.string,
-        targetClassName: PropTypes.string,
-        draggingOverFrameClassName: PropTypes.string,
-        draggingOverTargetClassName: PropTypes.string,
-        onDragOver: PropTypes.func,
-        onDragLeave: PropTypes.func,
-        onDrop: PropTypes.func,
-        dropEffect: PropTypes.oneOf(['copy', 'move', 'link', 'none']),
+        className: prop_types_1.default.string,
+        targetClassName: prop_types_1.default.string,
+        draggingOverFrameClassName: prop_types_1.default.string,
+        draggingOverTargetClassName: prop_types_1.default.string,
+        onDragOver: prop_types_1.default.func,
+        onDragLeave: prop_types_1.default.func,
+        onDrop: prop_types_1.default.func,
+        dropEffect: prop_types_1.default.oneOf(['copy', 'move', 'link', 'none']),
         frame: function (props, propName, componentName) {
             var prop = props[propName];
             if (prop == null) {
@@ -141,9 +143,9 @@ var FileDrop = /** @class */ (function (_super) {
                 return new Error('Warning: Prop `' + propName + '` must be one of the following: document, HTMLElement!');
             }
         },
-        onFrameDragEnter: PropTypes.func,
-        onFrameDragLeave: PropTypes.func,
-        onFrameDrop: PropTypes.func,
+        onFrameDragEnter: prop_types_1.default.func,
+        onFrameDragLeave: prop_types_1.default.func,
+        onFrameDrop: prop_types_1.default.func,
     };
     FileDrop.isIE = function () { return ((window && ((window.navigator.userAgent.indexOf('MSIE') !== -1) || (window.navigator.appVersion.indexOf('Trident/') > 0)))); };
     FileDrop.eventHasFiles = function (event) {
@@ -159,5 +161,5 @@ var FileDrop = /** @class */ (function (_super) {
         return hasFiles;
     };
     return FileDrop;
-}(React.PureComponent));
-export default FileDrop;
+}(react_1.default.PureComponent));
+exports.default = FileDrop;
